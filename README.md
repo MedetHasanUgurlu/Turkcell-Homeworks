@@ -14,5 +14,7 @@ Gereksinimler
 4.     Satışlarda kampanya entegrasyonunu simule ediniz.
 
 5.     Ödevinizi Github’a yükleyiniz. Github linkinizi paylaşınız.
+![image](https://user-images.githubusercontent.com/77449083/226001183-aa0e6a09-dd5e-4639-8d0c-e104a416da53.png)
+
 
 # "One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them."
