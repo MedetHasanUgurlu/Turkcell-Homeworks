@@ -1,11 +1,14 @@
-package org.example.hmwk1.service;
+package org.example.hmwk1.service.impl;
 
 import org.example.hmwk1.entity.Campaign;
+import org.example.hmwk1.service.CampaignService;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CampaignManager implements CampaignService{
+public class CampaignManager implements CampaignService {
+
     List<Campaign> campaigns = new ArrayList<>();
     @Override
     public void addCampaign(Campaign campaign) {
@@ -42,9 +45,9 @@ public class CampaignManager implements CampaignService{
         for(Campaign campaign1: campaigns){
             if(campaign1.getId()==id){
                 updateToCampaign = campaign1;
-                updateToCampaign.setGame(campaign.getGame());
+                updateToCampaign.setGame(campaign.getGames().get(id));
                 updateToCampaign.setDiscountAmount(campaign.getDiscountAmount());
-                updateToCampaign.setTime(campaign.getTime());
+                updateToCampaign.setDayTime(campaign.getDayTime());
             }else{
                 System.out.println("Campaign is not found and also not updated");
             }
@@ -56,4 +59,6 @@ public class CampaignManager implements CampaignService{
     public List<Campaign> getCampaigns() {
         return campaigns;
     }
+
+
 }

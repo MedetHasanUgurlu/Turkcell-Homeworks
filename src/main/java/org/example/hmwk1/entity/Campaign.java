@@ -1,15 +1,18 @@
 package org.example.hmwk1.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Campaign {
     private int id;
     private int discountAmount=0;
-    private int time=15;
-    private Game game;
-
-    public Campaign(int id,int discountAmount, int time, Game game) {
+    private int dayTime = 15;
+    private List<Game> games = new ArrayList<>();
+    public Campaign(int id, int discountAmount, int dayTime, Game games) {
+        this.id=id;
         this.discountAmount = discountAmount;
-        this.time = time;
-        this.game = game;
+        this.dayTime = dayTime;
+        this.games.add(games) ;
     }
 
     public int getDiscountAmount() {
@@ -20,20 +23,20 @@ public class Campaign {
         this.discountAmount = discountAmount;
     }
 
-    public int getTime() {
-        return time;
+    public int getDayTime() {
+        return dayTime;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+    public void setDayTime(int dayTime) {
+        this.dayTime = dayTime;
     }
 
-    public Game getGame() {
-        return game;
+    public List<Game> getGames() {
+        return games;
     }
 
-    public void setGame(Game game) {
-        this.game = game;
+    public void setGame(Game games) {
+        this.games.add(games) ;
     }
 
     public int getId() {
@@ -49,8 +52,8 @@ public class Campaign {
         return "Campaign{" +
                 "id=" + id +
                 ", discountAmount=" + discountAmount +
-                ", time=" + time +
-                ", game=" + game +
+                ", dayTime=" + dayTime +
+                ", game=" + games +
                 '}';
     }
 }

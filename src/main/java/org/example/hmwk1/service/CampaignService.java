@@ -4,6 +4,8 @@ import org.example.hmwk1.entity.Campaign;
 
 import java.util.List;
 
+import java.util.List;
+
 public interface CampaignService {
     void addCampaign(Campaign campaign);
     void deleteCampaign(Campaign campaign);

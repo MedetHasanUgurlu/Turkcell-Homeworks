@@ -1,26 +1,35 @@
 package org.example.hmwk1.entity;
 
 
-public class Customer extends BaseClass  {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Customer extends User {
 
     private String name;
     private String surName;
     private String tc;
     private int birthYear;
-    private Game game;
+    private  List<Game> games = new ArrayList<>();
 
 
-    public Customer(int id, String email, String password) {
-        super(id, email, password);
-    }
-
-    public Customer(int id, String email, String password, String name, String surName, String tc, int birthYear, Game game) {
+    public Customer(int id, String email, String password, String name, String surName, String tc, int birthYear ) {
         super(id, email, password);
         this.name = name;
         this.surName = surName;
         this.tc = tc;
         this.birthYear = birthYear;
-        this.game = game;
+
+    }
+
+    public Customer(int id, String email, String password, String name, String surName, String tc, int birthYear, Game game ) {
+        super(id, email, password);
+        this.name = name;
+        this.surName = surName;
+        this.tc = tc;
+        this.birthYear = birthYear;
+        this.games.add(game);
+
     }
 
     public String getName() {
@@ -55,12 +64,12 @@ public class Customer extends BaseClass  {
         this.birthYear = birthYear;
     }
 
-    public Game getGame() {
-        return game;
+    public List<Game> getGames() {
+        return games;
     }
 
-    public void setGame(Game game) {
-        this.game = game;
+    public void addGame(Game game) {
+        this.games.add(game);
     }
 
     @Override
@@ -70,7 +79,7 @@ public class Customer extends BaseClass  {
                 ", surName='" + surName + '\'' +
                 ", tc='" + tc + '\'' +
                 ", birthYear=" + birthYear +
-                ", game=" + game +
+                ", games=" + games +
                 '}';
     }
 }

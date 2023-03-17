@@ -1,15 +1,16 @@
 package org.example.hmwk1.entity;
 
-public abstract class BaseClass {
+public abstract class User {
     private int id;
     private String email;
     private String password;
 
-    public BaseClass(int id, String email, String password) {
+    public User(int id, String email, String password) {
         this.id = id;
         this.email = email;
         this.password = password;
     }
+
 
     public int getId() {
         return id;
